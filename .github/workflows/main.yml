@@ -5,7 +5,7 @@ env:
   # docker_repo:   This must be changed between forks.  This should be the
   #                dockerhub repository you will be using to register the
   #                docker containers to.
-  docker_repo: gromacs/gromacs
+  docker_repo: firesimulations/gromacs
 
   # Here you can specify the versions of the
   # various parameters, such as gcc or cuda.
@@ -231,10 +231,10 @@ jobs:
         docker push "${{env.docker_repo}}:${{env.docker_tag}}"
 
     - name: Docker Push latest tag
-      if: github.ref == 'master' || github.repository != 'bioexcel/gromacs-docker'
+      if: github.ref == 'master' || github.repository != 'firesimulations/gromacs-docker'
       run: docker push "${{env.docker_repo}}:latest"
       
     - name: Docker Push dev tag
-      if: github.ref == 'dev' || github.repository != 'bioexcel/gromacs-docker'
+      if: github.ref == 'dev' || github.repository != 'firesimulations/gromacs-docker'
       run: docker push "${{env.docker_repo}}:dev"
 

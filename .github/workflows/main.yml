@@ -9,11 +9,11 @@ env:
 
   # Here you can specify the versions of the
   # various parameters, such as gcc or cuda.
-  fftw: 3.3.8
+  fftw: 3.3.10
   gromacs: 2022.2
   cmake: 3.17.1
   gcc: 8
-  cuda: 11.6.0
+  cuda: 11.7.0
   openmpi: 4.0.0
   ubuntu: 20.04
   rdtscp: off

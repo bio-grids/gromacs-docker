@@ -4,6 +4,7 @@ on:
   push:
     branches:
       - 'docker'
+      - 'master'
 env:
   # docker_repo:   This must be changed between forks.  This should be the
   #                dockerhub repository you will be using to register the

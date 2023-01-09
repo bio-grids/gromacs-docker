@@ -1,6 +1,9 @@
 ---
 name: Build and push to Docker Hub
-on: [push,pull_request]
+on:
+  push:
+    branches:
+      - 'docker'
 env:
   # docker_repo:   This must be changed between forks.  This should be the
   #                dockerhub repository you will be using to register the
@@ -9,13 +12,13 @@ env:
 
   # Here you can specify the versions of the
   # various parameters, such as gcc or cuda.
-  fftw: 3.3.10
-  gromacs: 2022.2
-  cmake: 3.17.1
+  fftw: 3.3.8
+  gromacs: 2022.4
+  cmake: 3.25.1
   gcc: 8
-  cuda: 11.7.0
-  openmpi: 4.0.0
-  ubuntu: 20.04
+  cuda: 12.0.0
+  openmpi: 4.1.4
+  ubuntu: 22.04
   rdtscp: off
 
   # simd_types:  List of simd instruction set, Multiple option can be
@@ -27,7 +30,7 @@ env:
 ############################################
 
 jobs:
-  # Convert additiona_simd_types into a JSON object that can be used as
+  # Convert additional_simd_types into a JSON object that can be used as
   # an input to the build matrix in build_sub_containers
   get_builds:
     runs-on: ubuntu-20.04

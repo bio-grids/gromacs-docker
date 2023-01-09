@@ -13,13 +13,13 @@ env:
 
   # Here you can specify the versions of the
   # various parameters, such as gcc or cuda.
-  fftw: 3.3.8
+  fftw: 3.3.10
   gromacs: 2022.4
   cmake: 3.25.1
   gcc: 8
   cuda: 12.0.0
-  openmpi: 4.1.4
-  ubuntu: 20.04
+  openmpi: 4.0.0
+  ubuntu: lunar-20221216
   rdtscp: off
 
   # simd_types:  List of simd instruction set, Multiple option can be
